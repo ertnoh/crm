@@ -1,11 +1,7 @@
 <?php
-require "head.php";
+require_once "head.php";
+require_once "menu.php";
 ?>
-<tbody>
-<?=$error; ?>
-<?=$flash; ?>
-
-<a href="#">Страница2</a>
-<a href="/logout">Выйти</a>
-</tbody>
+<?= $error; ?>
+<?= $flash; ?>
 </html>

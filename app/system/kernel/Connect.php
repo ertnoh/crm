@@ -381,13 +381,13 @@ class Connect extends MongoConnect
      */
     public function generateId()
     {
-        //$newId = uniqid().bin2hex(openssl_random_pseudo_bytes(5));
-        $this->selectTable('Ids');
-        $table = $this->table;
-        $data = $this->findOneArr(["$table" => ['$exists' => true]]);
-        $newId = $data["$table"] + 1;
-        $this->saveBy__Id($this->cursorID, ["$table" => $newId]);
-        $this->table();
+        $newId = uniqid().bin2hex(openssl_random_pseudo_bytes(5));
+//        $this->selectTable('Ids');
+//        $table = $this->table;
+//        $data = $this->findOneArr(["$table" => ['$exists' => true]]);
+//        $newId = $data["$table"] + 1;
+//        $this->saveBy__Id($this->cursorID, ["$table" => $newId]);
+//        $this->table();
         return $newId;
     }
 
